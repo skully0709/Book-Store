@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs & Reviews - Vintage Bookstore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap & FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="styles/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <style>
+
+        .faq-container, .review-container, .thank-you-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #6c4f3d;
+            font-weight: bold;
+        }
+
+        .accordion-button {
+            background: #f8f1e9;
+            color: #6c4f3d;
+            font-weight: bold;
+        }
+
+        .accordion-button:hover {
+            background: #e5d5c3;
+        }
+
+        /* Thank You Section */
+        .thank-you-container {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff8e7;
+        }
+
+        .thank-you-container h2 {
+            color: #6c4f3d;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .thank-you-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Review Section */
+        .review-container {
+            margin-top: 20px;
+        }
+
+        .review-input {
+            width: 100%;
+            border: 2px solid #6c4f3d;
+            padding: 12px;
+            border-radius: 8px;
+            resize: none;
+        }
+
+        .submit-btn {
+            background-color: #6c4f3d;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .submit-btn:hover {
+            background-color: #543b28;
+        }
+
+        .review-list {
+            margin-top: 20px;
+        }
+
+        .review-item {
+            background: #e5d5c3;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about our bookstore, orders, memberships, and more!</p>
+    </header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-3">
+    <div class="container">
+        <!-- Brand Name -->
+        <a class="navbar-brand px-3" href="index.html">Vintage Bookstore</a>
+
+        <!-- Navbar Toggler (for mobile) -->
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="catalogue.html">Catalog</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="faq.html">FAQs</a>
+                </li>
+            </ul>
+
+            <!-- Cart & Wishlist Icons (Aligned to the Right) -->
+            <ul class="navbar-nav ms-auto pe-3">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="wishlist.html">
+                    <img src="logos/wishlist.png" width="30" height="30" alt="Wishlist" class="me-2">
+                    Wishlist
+                    <span class="badge bg-danger ms-2" id="wishlistCount">0</span>
+                </a>
+            </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="cart.html">
+                        <img src="logos/cart.png" width="30" height="30" alt="Cart" class="me-2">
+                        Cart
+                        <span class="badge bg-danger ms-2" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- FAQ Section -->
+<div class="container faq-container">
+    <h2>FAQs</h2>
+    <div class="accordion" id="faqAccordion">
+
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    How do I place an order?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Simply browse our catalog, add books to your cart, and proceed to checkout.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                    What payment methods do you accept?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We accept credit/debit cards, UPI, net banking, and cash on delivery.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                    Can I cancel or modify my order after placing it?
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, you can modify or cancel your order within 24 hours of placing it by contacting our support team.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                    How long does delivery take?
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Delivery usually takes 3-7 business days, depending on your location.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq6">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                    Do you offer discounts or promotions?
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! We offer seasonal discounts and special promotions. Keep an eye on our website for the latest deals.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq7">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                    Are the books new or pre-owned?
+                </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    We offer both new and pre-owned books. Each product page indicates whether a book is new or used.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq8">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                    Do you provide gift-wrapping options?
+                </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we offer gift-wrapping services for an additional fee. You can select this option at checkout.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq9">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                    Can I return or exchange a book?
+                </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, books can be returned or exchanged within 14 days of purchase, provided they are in original condition.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq10">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                    Do you sell rare or collector's edition books?
+                </button>
+            </h2>
+            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we have a special collection of rare and collector's edition books. Browse our "Special Editions" section.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq11">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                    Can I track my order?
+                </button>
+            </h2>
+            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, once your order is shipped, you will receive a tracking number via email.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                    Do you have a physical bookstore location?
+                </button>
+            </h2>
+            <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes, we have a physical store where you can browse and purchase books in person. Check our "About" page for details.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq13">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                    How can I contact customer support?
+                </button>
+            </h2>
+            <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    You can contact us via email, phone, or our live chat. Visit our "Contact Us" page for details.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                    Do you offer international shipping?
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Currently, we ship only within India, but we are working on international shipping soon!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Thank You Message (Before Review Section) -->
+<div class="container thank-you-container" id="thankYouMessage">
+    <h2>Thank You!</h2>
+    <p>Your review has been submitted successfully. We appreciate your feedback!</p>
+</div>
+
+<!-- Review Section -->
+<div class="container review-container">
+    <h2>Share Your Thoughts</h2>
+    <textarea id="reviewInput" class="review-input" placeholder="Write your review here..."></textarea>
+    <button class="submit-btn" onclick="addReview()">Submit Review</button>
+    <div class="review-list" id="reviewList">
+        <div class="review-item"><strong>📖 Emily:</strong> Amazing selection of vintage books! Loved the experience.</div>
+        <div class="review-item"><strong>📚 Arjun:</strong> Smooth checkout and fast delivery. Highly recommended!</div>
+    </div>
+</div>
+
+
+<section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_detail">
+            <h4>
+              About Us
+            </h4>
+            <p>
+              Welcome to our bookstore, where stories come to life! We offer a curated selection of books across various genres, catering to every reader's passion. Whether you love fiction, history, or self-improvement, we have something for you.
+            </p>
+            <div class="info_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  123 Book Street, Literary City, ABC 45678
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  contact@bookstore.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="info_contact">
+            <h4>
+              Newsletter
+            </h4>
+            <p>Stay updated with the latest arrivals, special discounts, and book recommendations. Subscribe to our newsletter!</p>
+            <form action="#">
+              <input type="text" placeholder="Enter email" />
+              <button type="submit">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info-col">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2025 Vintage Bookstore | All Rights Reserved</p>
+    <div class="social-links mt-2">
+        <a href="#" class="text-light me-3">Facebook</a>
+        <a href="#" class="text-light me-3">Twitter</a>
+        <a href="#" class="text-light">Instagram</a>
+    </div>
+    <p class="mt-2">Contact us: info@vintagebookstore.com | +123 456 7890</p>
+  </footer>
+
+
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script>
+    function addReview() {
+        let reviewText = document.getElementById("reviewInput").value.trim();
+        let reviewList = document.getElementById("reviewList");
+
+        if (reviewText === "") {
+            alert("Please write something before submitting!");
+            return;
+        }
+
+        let newReview = document.createElement("div");
+        newReview.classList.add("review-item");
+        newReview.innerHTML = `<strong>📚 Anonymous:</strong> ${reviewText}`;
+        reviewList.prepend(newReview);
+
+        // Show thank-you message
+        document.getElementById("thankYouMessage").style.display = "block";
+
+        // Hide message after 3 seconds
+        setTimeout(() => {
+            document.getElementById("thankYouMessage").style.display = "none";
+        }, 3000);
+
+        // Clear input field
+        document.getElementById("reviewInput").value = "";
+    }
+</script>
+<script src="js/cart.js"></script>
+
+</body>
+</html>

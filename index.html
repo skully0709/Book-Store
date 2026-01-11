@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Bookstore</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+     <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="styles/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="styles/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="styles/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header style="height: 500px;" >
+        <h1 style="font-size: 75px;">Welcome to Vintage Bookstore</h1>
+        <p>Your gateway to timeless literature</p>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-3">
+        <div class="container">
+            <!-- Brand Name -->
+            <a class="navbar-brand px-3" href="index.html">Vintage Bookstore</a>
+    
+            <!-- Navbar Toggler (for mobile) -->
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="catalogue.html">Catalog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="faq.html">FAQs</a>
+                    </li>
+                </ul>
+    
+                <!-- Cart & Wishlist Icons (Aligned to the Right) -->
+                <ul class="navbar-nav ms-auto pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="wishlist.html">
+                        <img src="logos/wishlist.png" width="30" height="30" alt="Wishlist" class="me-2">
+                        Wishlist
+                        <span class="badge bg-danger ms-2" id="wishlistCount">0</span>
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="cart.html">
+                            <img src="logos/cart.png" width="30" height="30" alt="Cart" class="me-2">
+                            Cart
+                            <span class="badge bg-danger ms-2" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+
+     <!-- slider section -->
+     <section class="slider_section">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <ol class="carousel-indicators">
+                    <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#customCarousel1" data-slide-to="1"></li>
+                    <li data-target="#customCarousel1" data-slide-to="2"></li>
+                    <li data-target="#customCarousel1" data-slide-to="3"></li>
+                </ol>
+                <!-- Mahabharat -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h5>Mahabharat</h5>
+                                    <h1>Epic of Ancient India</h1>
+                                    <p>An ancient Indian epic that narrates the Kurukshetra War and explores dharma, devotion, and destiny.</p>
+                                    <a href="catalogue.html">Explore More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="images/mahabharat.jpg" alt="Mahabharat">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rich Dad Poor Dad -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h5>Rich Dad Poor Dad</h5>
+                                    <h1>Financial Wisdom for Life</h1>
+                                    <p>A personal finance book by Robert Kiyosaki that highlights financial independence and smart investing.</p>
+                                    <a href="catalogue.html">Explore More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="images/richdad.jpeg" alt="Rich Dad Poor Dad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Think and Grow Rich -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h5>Think and Grow Rich</h5>
+                                    <h1>Success Principles</h1>
+                                    <p>Napoleon Hill's best-selling book on success, personal development, and achieving financial independence.</p>
+                                    <a href="catalogue.html">Explore More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="images/thinkandgrow.jpg" alt="Think and Grow Rich">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The Philosophy of Money -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h5>The Philosophy of Money</h5>
+                                    <h1>Understanding Wealth</h1>
+                                    <p>Georg Simmel’s deep exploration of the role of money in society, philosophy, and human behavior.</p>
+                                    <a href="catalogue.html">Explore More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="images/pom.jpeg" alt="The Philosophy of Money">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel_btn_box" >
+                <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+      
+    <section class="catagory_section layout_padding">
+        <div class="catagory_container">
+          <div class="container ">
+            <div class="heading_container heading_center">
+              <h2>
+                Books Categories
+              </h2>
+              <p>
+                Explore a wide range of book categories that cater to every reader's interest.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat1.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>Textbooks</h5>
+                    <p>Comprehensive textbooks for academic excellence in various subjects.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat2.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>Science</h5>
+                    <p>Unravel the mysteries of the universe with engaging science books.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat3.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>History</h5>
+                    <p>Dive into the past and explore historical events and civilizations.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat4.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>Biography</h5>
+                    <p>Read inspiring life stories of great personalities and leaders.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat5.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>Adventure</h5>
+                    <p>Exciting tales of exploration, survival, and thrilling escapades.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 ">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="images/cat6.png" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>Fantasy</h5>
+                    <p>Magical worlds and mythical creatures await in these fantasy books.</p>
+                  </div>
+                </div>
+            </div>
+             </section>
+             
+      <section id="catalog" class="container my-5">
+        <h2 class="text-center">Featured Books</h2><br><br>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/pop.jpg" class="card-img-top" alt="Book 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Pride and Prejudice</h5>
+                        <p class="card-text">A classic novel by Jane Austen about love and society.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal1">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/mahabharat.jpg" class="card-img-top" alt="Mahabharat">
+                    <div class="card-body">
+                        <h5 class="card-title">Mahabharat</h5>
+                        <p class="card-text">The great Indian epic about duty, honor, and destiny.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal2">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/harry1.jpg" class="card-img-top" alt="Harry Potter and the Sorcerer’s Stone">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter and the Sorcerer’s Stone</h5>
+                        <p class="card-text">The magical beginning of Harry Potter’s journey at Hogwarts.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalHP1">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/harry2.jpg" class="card-img-top" alt="Harry Potter and the Chamber of Secrets">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter and the Chamber of Secrets</h5>
+                        <p class="card-text">The second year at Hogwarts brings dark secrets and dangers.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalHP2">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/pom.jpeg" class="card-img-top" alt="The Philosophy of Money">
+                    <div class="card-body">
+                        <h5 class="card-title">The Philosophy of Money</h5>
+                        <p class="card-text">A sociological and philosophical exploration of money and its impact on society.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalMoney">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/richdad.jpeg" class="card-img-top" alt="Rich Dad Poor Dad">
+                    <div class="card-body">
+                        <h5 class="card-title">Rich Dad Poor Dad</h5>
+                        <p class="card-text">A powerful book on financial education and wealth-building mindset.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalRDPD">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/thinkandgrow.jpg" class="card-img-top" alt="Think and Grow Rich">
+                    <div class="card-body">
+                        <h5 class="card-title">Think and Grow Rich</h5>
+                        <p class="card-text">A classic self-help book on success and financial independence.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalTAGR">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/therichestman.jpg" class="card-img-top" alt="The Richest Man in Babylon">
+                    <div class="card-body">
+                        <h5 class="card-title">The Richest Man in Babylon</h5>
+                        <p class="card-text">A timeless financial guide based on ancient Babylonian principles.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModalRMIB">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- Modal Templates -->
+
+<!-- Mahabharat Modal -->
+<div class="modal fade" id="bookModal2" tabindex="-1" aria-labelledby="bookModal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookModal2Label">Mahabharat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Author:</strong> Vyasa</p>
+                <p><strong>Genre:</strong> Epic, Mythology</p>
+                <p><strong>Published:</strong> Ancient India (circa 400 BCE - 400 CE)</p>
+                <p><strong>Description:</strong> One of the greatest epics of Indian history, the *Mahabharat* narrates the story of the Kuru dynasty, the rivalry between the Pandavas and Kauravas, and the great war of Kurukshetra. It contains the Bhagavad Gita and offers profound philosophical and ethical lessons.</p>
+                <img src="images/mahabharat.jpg" class="img-fluid" alt="Mahabharat">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pride and Prejudice Modal -->
+<div class="modal fade" id="bookModal1" tabindex="-1" aria-labelledby="bookModal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookModal1Label">Pride and Prejudice</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Author:</strong> Jane Austen</p>
+                <p><strong>Genre:</strong> Romance, Classic Literature</p>
+                <p><strong>Published:</strong> 1813</p>
+                <p><strong>Description:</strong> A timeless novel exploring themes of love, social class, and marriage in 19th-century England. The witty and independent Elizabeth Bennet navigates her complex relationship with the proud but honorable Mr. Darcy.</p>
+                <img src="images/pop.jpg" class="img-fluid" alt="Pride and Prejudice">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="bookModalHP1" tabindex="-1" aria-labelledby="bookModalHP1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalHP1Label">Harry Potter and the Sorcerer’s Stone</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> J.K. Rowling</p>
+                    <p><strong>Genre:</strong> Fantasy, Adventure</p>
+                    <p><strong>Published:</strong> 1997</p>
+                    <p><strong>Description:</strong> The first book in the Harry Potter series follows the young orphan Harry as he discovers he is a wizard and begins his journey at Hogwarts. With his newfound friends Ron and Hermione, he unravels the mystery of the Sorcerer’s Stone.</p>
+                    <img src="images/harry1.jpg" class="img-fluid" alt="Harry Potter and the Sorcerer’s Stone">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="bookModalHP2" tabindex="-1" aria-labelledby="bookModalHP2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalHP2Label">Harry Potter and the Chamber of Secrets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> J.K. Rowling</p>
+                    <p><strong>Genre:</strong> Fantasy, Adventure</p>
+                    <p><strong>Published:</strong> 1998</p>
+                    <p><strong>Description:</strong> Harry’s second year at Hogwarts is threatened by a terrifying monster lurking within the Chamber of Secrets. As students are petrified one by one, Harry must uncover the truth before it's too late.</p>
+                    <img src="images/harry2.jpg" class="img-fluid" alt="Harry Potter and the Chamber of Secrets">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookModalMoney" tabindex="-1" aria-labelledby="bookModalMoneyLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalMoneyLabel">The Philosophy of Money</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> Georg Simmel</p>
+                    <p><strong>Genre:</strong> Philosophy, Sociology</p>
+                    <p><strong>Published:</strong> 1900</p>
+                    <p><strong>Description:</strong> This book explores the relationship between money and social interactions, providing deep insights into how economic structures shape human behavior, social institutions, and cultural values.</p>
+                    <img src="images/pom.jpeg" class="img-fluid" alt="The Philosophy of Money">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookModalRDPD" tabindex="-1" aria-labelledby="bookModalRDPDLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalRDPDLabel">Rich Dad Poor Dad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> Robert T. Kiyosaki</p>
+                    <p><strong>Genre:</strong> Personal Finance, Self-Help</p>
+                    <p><strong>Published:</strong> 1997</p>
+                    <p><strong>Description:</strong> This bestseller contrasts the financial philosophies of two father figures: Kiyosaki's own educated but financially struggling father (*Poor Dad*) and his friend’s wealthy, financially savvy father (*Rich Dad*). The book provides valuable insights on financial literacy, investing, and building wealth through smart money management.</p>
+                    <img src="images/richdad.jpeg" class="img-fluid" alt="Rich Dad Poor Dad">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookModalTAGR" tabindex="-1" aria-labelledby="bookModalTAGRLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalTAGRLabel">Think and Grow Rich</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> Napoleon Hill</p>
+                    <p><strong>Genre:</strong> Self-Help, Personal Development</p>
+                    <p><strong>Published:</strong> 1937</p>
+                    <p><strong>Description:</strong> Based on decades of research, this book lays out 13 principles for achieving success, wealth, and personal development. Napoleon Hill studied successful individuals, including Andrew Carnegie and Henry Ford, to create a timeless guide to financial and personal growth.</p>
+                    <img src="images/thinkandgrow.jpg" class="img-fluid" alt="Think and Grow Rich">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookModalRMIB" tabindex="-1" aria-labelledby="bookModalRMIBLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalRMIBLabel">The Richest Man in Babylon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Author:</strong> George S. Clason</p>
+                    <p><strong>Genre:</strong> Personal Finance, Self-Help</p>
+                    <p><strong>Published:</strong> 1926</p>
+                    <p><strong>Description:</strong> This book presents financial wisdom through engaging parables set in ancient Babylon. Covering wealth-building strategies, saving principles, and investment tips, it remains one of the most influential personal finance books of all time.</p>
+                    <img src="images/therichestman.jpg" class="img-fluid" alt="The Richest Man in Babylon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="info_section layout_padding2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_detail">
+                <h4>
+                  About Us
+                </h4>
+                <p>
+                  Welcome to our bookstore, where stories come to life! We offer a curated selection of books across various genres, catering to every reader's passion. Whether you love fiction, history, or self-improvement, we have something for you.
+                </p>
+                <div class="info_social">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_contact">
+                <h4>
+                  Address
+                </h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      123 Book Street, Literary City, ABC 45678
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Call +01 1234567890
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      contact@bookstore.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_contact">
+                <h4>
+                  Newsletter
+                </h4>
+                <p>Stay updated with the latest arrivals, special discounts, and book recommendations. Subscribe to our newsletter!</p>
+                <form action="#">
+                  <input type="text" placeholder="Enter email" />
+                  <button type="submit">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="map_container">
+                <div class="map">
+                  <div id="googleMap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Vintage Bookstore | All Rights Reserved</p>
+        <div class="social-links mt-2">
+            <a href="#" class="text-light me-3">Facebook</a>
+            <a href="#" class="text-light me-3">Twitter</a>
+            <a href="#" class="text-light">Instagram</a>
+        </div>
+        <p class="mt-2">Contact us: info@vintagebookstore.com | +123 456 7890</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+     <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

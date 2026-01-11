@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Vintage Bookstore</title>
+    <link rel="icon" href="images/favicon.png" type="image/gif" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="styles/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('images/library.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Georgia', serif;
+            color: #333;
+        }
+        .wishlist-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .empty-wishlist {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #003366;
+        }
+        .wishlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            background: #fef3e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .wishlist-item button {
+            background: #005bb5;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        .wishlist-item button:hover {
+            background: #003f7f;
+        }
+        .add-books-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background: #28a745;
+            color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .add-books-btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Wishlist</h1>
+        <p>Keep track of your favorite books and move them to your cart when you're ready to buy!</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-3">
+        <div class="container">
+            <!-- Brand Name -->
+            <a class="navbar-brand px-3" href="index.html">Vintage Bookstore</a>
+    
+            <!-- Navbar Toggler (for mobile) -->
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="catalogue.html">Catalog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="faq.html">FAQs</a>
+                    </li>
+                </ul>
+    
+                <!-- Cart & Wishlist Icons (Aligned to the Right) -->
+                <ul class="navbar-nav ms-auto pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="wishlist.html">
+                        <img src="logos/wishlist.png" width="30" height="30" alt="Wishlist" class="me-2">
+                        Wishlist
+                        <span class="badge bg-danger ms-2" id="wishlistCount">0</span>
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="cart.html">
+                            <img src="logos/cart.png" width="30" height="30" alt="Cart" class="me-2">
+                            Cart
+                            <span class="badge bg-danger ms-2" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    
+    <div class="container wishlist-container">
+        <h2>Your Wishlist</h2>
+        <div id="wishlistItems"></div>
+        <div id="emptyWishlistMessage" class="empty-wishlist">Your wishlist is empty.</div>
+        <button class="add-books-btn" onclick="window.location.href='catalogue.html'">Add Books</button>
+    </div>
+<br><br><br><br><br><br><br>
+    <section class="info_section layout_padding2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_detail">
+                <h4>
+                  About Us
+                </h4>
+                <p>
+                  Welcome to our bookstore, where stories come to life! We offer a curated selection of books across various genres, catering to every reader's passion. Whether you love fiction, history, or self-improvement, we have something for you.
+                </p>
+                <div class="info_social">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_contact">
+                <h4>
+                  Address
+                </h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      123 Book Street, Literary City, ABC 45678
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Call +01 1234567890
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      contact@bookstore.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="info_contact">
+                <h4>
+                  Newsletter
+                </h4>
+                <p>Stay updated with the latest arrivals, special discounts, and book recommendations. Subscribe to our newsletter!</p>
+                <form action="#">
+                  <input type="text" placeholder="Enter email" />
+                  <button type="submit">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info-col">
+              <div class="map_container">
+                <div class="map">
+                  <div id="googleMap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Vintage Bookstore | All Rights Reserved</p>
+        <div class="social-links mt-2">
+            <a href="#" class="text-light me-3">Facebook</a>
+            <a href="#" class="text-light me-3">Twitter</a>
+            <a href="#" class="text-light">Instagram</a>
+        </div>
+        <p class="mt-2">Contact us: info@vintagebookstore.com | +123 456 7890</p>
+      </footer>
+    
+    <script>
+        const books = [
+            { id: 1, title: "Pride and Prejudice", genre: "Fiction", price: 200 },
+            { id: 2, title: "Mahabharat", genre: "Fiction", price: 1000 },
+            { id: 3, title: "Harry Potter and the Sorcerer’s Stone", genre: "Fiction", price: 500 },
+            { id: 4, title: "Harry Potter and the Chamber of Secrets", genre: "Fiction", price: 500 },
+            { id: 5, title: "The Philosophy of Money", genre: "Non-Fiction", price: 350 },
+            { id: 6, title: "Rich Dad Poor Dad", genre: "Non-Fiction", price: 150 },
+            { id: 7, title: "Think and Grow Rich", genre: "Non-Fiction", price: 120 },
+            { id: 8, title: "The Richest Man in Babylon", genre: "Non-Fiction", price: 100 }
+        ];
+
+        function loadWishlist() {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            let wishlistContainer = document.getElementById("wishlistItems");
+            let emptyMessage = document.getElementById("emptyWishlistMessage");
+            wishlistContainer.innerHTML = "";
+            
+            if (wishlist.length === 0) {
+                emptyMessage.style.display = "block";
+                return;
+            }
+            
+            emptyMessage.style.display = "none";
+            for (let item of wishlist) {
+                let bookData = books.find(b => b.title === item.title) || {};
+                let div = document.createElement("div");
+                div.classList.add("wishlist-item");
+                div.innerHTML = `
+                    <span><strong>${item.title}</strong> - ${bookData.genre || 'Unknown Genre'} - ₹${bookData.price || 'N/A'}</span>
+                    <div>
+                        <button onclick="moveToCart(${item.id}, ${bookData.price || 0})">Move to Cart</button>
+                        <button onclick="removeFromWishlist(${item.id})">Remove</button>
+                    </div>
+                `;
+                wishlistContainer.appendChild(div);
+            }
+        }
+
+        function removeFromWishlist(bookId) {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            wishlist = wishlist.filter(item => item.id !== bookId);
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            loadWishlist();
+        }
+
+        function moveToCart(bookId, price) {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let item = wishlist.find(b => b.id === bookId);
+            if (item) {
+                item.price = price;
+                item.quantity = 1; // Set default quantity to 1
+                item.total = price * item.quantity; // Calculate total price
+                cart.push(item);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                removeFromWishlist(bookId);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadWishlist);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
